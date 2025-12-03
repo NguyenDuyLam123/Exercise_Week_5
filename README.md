@@ -51,20 +51,15 @@ Dự án được tổ chức rõ ràng, giúp dễ bảo trì và mở rộng:
 
 lib/
 │── main.dart
-│
 ├── models/
 │   └── note.dart
-│
 ├── database/
 │   └── db_helper.dart
-│
 ├── providers/
 │   └── note_provider.dart
-│
 ├── screens/
 │   ├── home_page.dart
 │   └── note_editor_screen.dart
-│
 └── widgets/
     └── note_card.dart
 
