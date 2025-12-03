@@ -48,8 +48,8 @@
 
 Dự án được tổ chức rõ ràng, giúp dễ bảo trì và mở rộng:
 
-
 lib/
+
 │── main.dart
 ├── models/
 │   └── note.dart
