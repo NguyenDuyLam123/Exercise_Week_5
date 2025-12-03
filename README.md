@@ -108,9 +108,6 @@ Tự động lưu vào DB
 flutter pub get
 flutter run
 
-📸 Screenshots
-
-(Bạn có thể thêm ảnh chụp màn hình sau khi build app)
 
 📌 Bài tập yêu cầu
 
