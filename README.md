@@ -1,25 +1,32 @@
 📘 Simple Note App – Flutter (Exercise Week 5)
+    Một ứng dụng ghi chú đơn giản sử dụng Flutter, cho phép tạo, xem, sửa và xóa ghi chú một cách dễ dàng. Dữ liệu được lưu trữ cục bộ bằng SQLite và quản lý trạng thái bằng Provider.
 
-Ứng dụng ghi chú đơn giản sử dụng Flutter, SQLite, và Provider để quản lý trạng thái.
-Ứng dụng cho phép: tạo ghi chú, đọc danh sách, chỉnh sửa, và xóa (CRUD).
+✨ Tính năng
+    - ✏ Tạo ghi chú mới
+    - 📖 Xem danh sách ghi chú
+    - 🔧 Cập nhật ghi chú
+    - 🗑 Xóa ghi chú
+    - 💾 Lưu trữ dữ liệu bằng SQLite (sqflite)
+    - 🔄 Quản lý trạng thái bằng Provider
+    - 🎨 Giao diện đơn giản, dễ dùng
 
-🚀 Features
+🧩 Công nghệ & Thư viện
+    - Ngôn ngữ: Dart
+    - Framework: Flutter
+    - Cơ sở dữ liệu: SQLite (sqflite + path_provider)
+    - Quản lý trạng thái: Provider
+    - Hiển thị ngày giờ: intl
 
-✏ Create note
+📦 Dependencies (pubspec.yaml)
+    - sqflite: ^2.3.0
+    - path_provider: ^2.1.0
+    - provider: ^6.1.0
+    - intl: ^0.18.0
 
-📖 Read list of notes
+📂 Cấu trúc Dự án
 
-🔧 Update existing notes
+Dự án được tổ chức rõ ràng, giúp dễ bảo trì và mở rộng:
 
-🗑 Delete notes
-
-💾 Lưu trữ dữ liệu bằng SQLite (sqflite)
-
-🔄 Quản lý trạng thái bằng Provider
-
-🎨 UI đơn giản, dễ dùng, tách thành nhiều widget
-
-📂 Project Structure
 lib/
 │── main.dart
 │
@@ -39,90 +46,31 @@ lib/
 └── widgets/
     └── note_card.dart
 
-🧱 Technologies Used
+📝 Hoạt động của Ứng dụng
+1. Note Model
+    - Chứa cấu trúc dữ liệu của ghi chú
+    - toMap() – chuyển thành dạng lưu trong DB
+    - fromMap() – đọc dữ liệu từ DB
 
-Flutter 3.x
+2. SQLite – Database Helper
+    - Tạo và quản lý database
+    - CRUD đầy đủ (insert – query – update – delete)
+    - Áp dụng Singleton Pattern
 
-Dart (null-safety)
+3. Provider – NoteProvider
+    - Lưu danh sách các note
+    - Thêm / sửa / xóa note
+    - Gọi notifyListeners() để cập nhật UI
 
-Provider (state management)
+4. Home Page
+    - Hiển thị danh sách hết ghi chú
+    - Nút tạo ghi chú mới
+    - Điều hướng đến editor
 
-SQLite (sqflite + path_provider)
+5. Note Editor Page
+    - Chế độ tạo mới hoặc chỉnh sửa
+    - Tự động lưu ghi chú vào SQLite
 
-Material Design
-
-📦 Dependencies (pubspec.yaml)
-sqflite: ^2.3.0
-path_provider: ^2.1.0
-provider: ^6.1.0
-intl: ^0.18.0
-
-📝 How It Works
-1) Note Model
-
-Chứa cấu trúc note và hàm:
-
-toMap() → lưu vào DB
-
-fromMap() → đọc từ DB
-
-2) SQLite – Database Helper
-
-Tạo DB
-
-Tạo table notes
-
-CRUD đầy đủ (insert, query, update, delete)
-
-Áp dụng Singleton Pattern
-
-3) Provider – NoteProvider
-
-Tải danh sách note
-
-Thêm note
-
-Sửa note
-
-Xóa note
-
-notifyListeners() để cập nhật UI
-
-4) Home Page
-
-Hiển thị danh sách note
-
-Nút thêm note
-
-Điều hướng sang Editor
-
-5) Note Editor Page
-
-Chế độ tạo mới
-
-Chế độ chỉnh sửa
-
-Tự động lưu vào DB
-
-▶️ Run the App
-flutter pub get
-flutter run
-
-
-📌 Bài tập yêu cầu
-
-Tạo Note Model
-
-Tạo Database Helper
-
-CRUD Methods
-
-Provider
-
-Main App với Provider
-
-Home Screen
-
-Editor Screen
-
-➡ Tất cả đã được thực hiện đầy đủ trong project.
+▶️ Chạy Ứng dụng
+    - flutter pub get
+    - flutter run
