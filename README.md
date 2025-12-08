@@ -49,6 +49,8 @@ lib/
 └── widgets/
     └── note_card.dart
 ```
+Screenshots
+![alt text](image.png)
 
 📝 Hoạt động của Ứng dụng
 ```
